@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # 103-magic_calculation.py
-
 """ Magic class."""
 
 import math
