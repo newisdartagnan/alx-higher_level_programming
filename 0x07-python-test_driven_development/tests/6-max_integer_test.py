@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-"""Module to find the max integer in a list"""
+"""Unittest for max_integer([..])
+"""
+import unittest
+max_integer = __import__('6-max_integer_test').max_integer
 
+
+class TestMaxInteger(unittest.TestCase):
+"""Module to find the max integer in a list"""
 
 def max_integer(list=[]):
     """Function to find and return the max integer in a list of integers
