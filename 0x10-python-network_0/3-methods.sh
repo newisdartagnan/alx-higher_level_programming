@@ -7,7 +7,7 @@ if [[ -z $1 ]]; then
 fi
 
 # Make a request to the URL and retrieve the allowed methods
-response=$(curl -sI -X OPTIONS "$1" | grep -i "Allow:" | sed 's/Allow: //i')
+response=$(curl -sI "$1" | grep Allow: | cut -d ' ' -f 2-)
 
 # Check if any allowed methods are found
 if [[ -z $response ]]; then
@@ -15,4 +15,3 @@ if [[ -z $response ]]; then
 else
   echo "Allowed methods for $1: $response"
 fi
-
